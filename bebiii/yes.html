@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for responsiveness */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('us.jpg') center center / cover no-repeat;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 420px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        audio {
+            display: none; /* Hide the audio controls */
+        }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            p, li { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm Sorry</h1>
+        <p>I know I hurt you, and I deeply regret my actions especially on before your birthday. That day was supposed to be about you, about making you feel special, but instead, I let my emotions get in the way and ruined it. You deserved so much better from me.</p>
+        <p>I've taken time to reflect, and I now see how my actions made you feel unimportant and unloved. That was never my intention, but I understand that intentions mean nothing without action. Here are the promises I want to make to you:</p>
+
+        <ul class="promises">
+            <li>I will make you feel special and valued, not just on big occasions but every single day.</li>
+            <li>I will show my love through actions, not just words, so that you never have to doubt how much you mean to me.</li>
+            <li>I will always fight for our relationship, making sure you know I would never let you go easily.</li>
+            <li>I will be there for you, consistently and wholeheartedly, no matter what we go through.</li>
+            <li>I will show up for you on important days, and make the necessary compromises to ensure we're both happy and handle my emotions better. </li>
+            <li>I will work on myself to be a better partner—one who makes you feel secure, loved, and cherished.</li>
+        </ul>
+
+        <p>You are incredibly important to me, and I never want to make you feel otherwise again. I don’t just want to say these words, I want to prove them through time, patience, and effort.</p>
+
+        <h2>Terms and Conditions</h2>
+        <p>Moving forward, I promise to:</p>
+        <ul class="terms">
+            <li>Show through my actions that I love and appreciate you.</li>
+            <li>Make an effort every day to strengthen our relationship.</li>
+            <li>Listen to you, understand you, and always make you feel heard.</li>
+            <li>Handle conflicts with patience and love instead of shutting down.</li>
+            <li>Give you the consistency and care that you deserve.</li>
+        </ul>
+
+        <p>I love you, and I want to be the man you deserve.</p>
+
+        <form id="agreeForm" onsubmit="return handleAgree(event)">
+            <p>Do you agree to these terms and conditions?</p>
+            <label>
+                <input type="radio" name="response" value="agree" id="yesBtn"> I agree
+            </label>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Cat image full page overlay -->
+        <div id="cattoFullPage" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;background:#000;">
+            <img src="catto.png" alt="Catto" style="width:100vw;height:100vh;object-fit:contain;display:block;margin:0 auto;">
+        </div>
+    </div>
+
+    <script>
+        function handleAgree(event) {
+            event.preventDefault();
+            let radios = document.getElementsByName("response");
+            let agreed = false;
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked && radios[i].value === "agree") {
+                    agreed = true;
+                    break;
+                }
+            }
+            if (agreed) {
+                document.body.innerHTML = '';
+                document.body.style.margin = '0';
+                document.body.style.padding = '0';
+                document.body.style.background = '#000';
+                var img = document.createElement('img');
+                img.src = 'catto.png';
+                img.alt = 'Catto';
+                img.style.width = '100vw';
+                img.style.height = '100vh';
+                img.style.objectFit = 'contain';
+                img.style.display = 'block';
+                img.style.margin = '0 auto';
+                document.body.appendChild(img);
+            } else {
+                alert("Please select 'I agree' to see the cat!");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

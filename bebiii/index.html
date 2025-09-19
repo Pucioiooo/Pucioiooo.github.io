@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container.text-center {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+            padding: 32px;
+            margin-top: 40px;
+        }
+    </style>
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('us.jpg') center center / cover no-repeat;
+            filter: blur(8px);
+            z-index: -1;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology to my Charisse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio src="song_.mp3" autoplay loop style="display:none"></audio>
+    <div class="container text-center mt-5">
+ <h1 class="display-4">Dear Charisse, the love of my life ❤️</h1>
+        <p class="lead mt-4">I’ve spent a lot of time thinking about everything, and I realize now just how much I hurt you especially on before your 24th birthday. 
+            That was supposed to be a special day for you, and instead of making you feel celebrated, I let my emotions get in the way and ruined it by not paying attention to what you wanted and needed. 
+            You deserved a day filled with love, warmth, and happiness, and I failed to give that to you. I am truly sorry. 
+            Beyond that, I’ve made you feel unimportant in ways I never intended. 
+            The way I’ve acted made you doubt how much I love you, and that’s the last thing I ever wanted. 
+            Love isn’t just words but also showing up, making you feel special every day, and never making you question how much you mean to me. 
+            I should have done more, and I will do more. When you said you wanted to break up, I should have fought harder and not hurt you even more and hurt everyone around me. 
+            Not because I wanted to pressure you, but because you deserved to see how much I value our relationship. 
+            I should have shown you, not just told you that I care deeply and that I never want to lose you. 
+            My silence and hesitation made it seem like I was willing to let you go, but that couldn’t be further from the truth. 
+            I don’t expect this message to fix everything overnight. I know words alone aren’t enough. But I want you to know that I see where I went wrong, and I’m not going to let this be just another apology. 
+            I want to prove through time, patience, and effort that my love for you is real, and that making you feel special and important is my priority. 
+            No matter where we stand, I want you to be happy. But if there's even a small chance that I can make you feel cherished again, I won’t take it for granted.</p>
+
+        <!-- Updated GIF for the main section -->
+        <img src="https://i.pinimg.com/originals/06/86/e4/0686e40f7a36981b3c4bae27f70542d8.gif" alt="Hearts GIF" class="rounded mt-4 mb-4" width="200">
+
+        <div class="mt-4">
+            <p class="lead">Will you forgive me?</p>
+            <button class="btn btn-success btn-lg mx-2" id="yesBtn" onclick="redirectToYes()">Yes</button>
+            <button class="btn btn-danger btn-lg mx-2" id="noBtn" onclick="redirectToNo()">No</button>
+        </div>
+
+        <div id="responseGif" class="mt-4"></div>
+        <div id="responseText" class="mt-4 lead"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function redirectToYes() {
+            window.location.href = 'yes.html';
+        }
+        function redirectToNo() {
+            window.location.href = 'catt1.html';
+        }
+    </script>
+</body>
+</html>

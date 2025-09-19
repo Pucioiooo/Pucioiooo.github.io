@@ -1,0 +1,26 @@
+body {
+    background-color: #f8c6d8;
+    font-family: 'Arial', sans-serif;
+    color: #4d4d4d;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff6f91;
+}
+
+.lead {
+    font-size: 1.2rem;
+    margin: 0 15%;
+}
+
+button {
+    width: 100px;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+#responseGif img {
+    width: 250px;
+    border-radius: 15px;
+}
