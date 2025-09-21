@@ -1,0 +1,122 @@
+.content {
+  position: relative;
+  z-index: 3;
+  padding: 0 18%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  }
+  #no{
+  position: static;
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 8px 12px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  }
+  #yes{
+  position: static;
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 8px 12px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  }
+#bg{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .5;
+  /* height: 100vh; */
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/test6.jpg);
+  background-size: cover;
+  background-position: 50%;
+  -webkit-filter: blur(4px);
+}
+.swal2-title, .swal2-content{
+  color: azure !important;
+}
+.swal2-popup {
+  border-radius: 15px !important;
+  width: 90vw !important;
+  max-width: 400px !important;
+}
+
+header h2 {
+  font-family: 'Mali';
+  font-size: 60px;
+  text-align: center;
+  margin: 40px 0 30px 0;
+  font-weight: bold;
+  word-break: break-word;
+}
+header h3 {
+  font-family: 'Mali';
+  font-size: 40px;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  font-weight: bold;
+  word-break: break-word;
+}
+header h4 {
+  font-family: 'Mali';
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 1em;
+  word-break: break-word;
+}
+@media only screen and (max-width: 900px) {
+  .content {
+    padding: 0 5%;
+  }
+  header h2 {
+    font-size: 40px;
+  }
+  header h3 {
+    font-size: 28px;
+  }
+  header h4 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    padding: 0 2%;
+  }
+  header h2 {
+    font-size: 28px;
+    margin: 20px 0 15px 0;
+  }
+  header h3 {
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+  }
+  header h4 {
+    font-size: 12px;
+    padding: 8px;
+    margin-bottom: 0.5em;
+  }
+  #no{
+    font-size: 12px;
+    padding: 2px 6px;
+    margin: 4px 6px;
+  }
+  #yes{
+    font-size: 12px;
+    padding: 2px 6px;
+    margin: 4px 6px;
+  }
+  .swal2-popup {
+    width: 98vw !important;
+    max-width: 98vw !important;
+  }
+}
